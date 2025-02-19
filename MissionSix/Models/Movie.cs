@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.InteropServices;
 
 namespace MissionSix.Models
@@ -7,20 +8,31 @@ namespace MissionSix.Models
     {
         [Key]
         [Required]
-        public int Id { get; set; }
+        public int MovieId { get; set; }
+
+        
+        public int? CategoryId { get; set; }
+        [ForeignKey("CategoryId")]
+        public Categories Categories { get; set; }
         [Required]
-        public string category { get; set; }
+        public string Title { get; set; }
+        
         [Required]
-        public string title { get; set; }
+        [Range(1888, int.MaxValue, ErrorMessage = "Year must be greater than or equal to 1888")]
+        public int Year { get; set; }
+        
+        public string? Director { get; set; }
+       
+        public string? Rating { get; set; }
         [Required]
-        public int year { get; set; }
+        public bool Edited { get; set; }
+
         [Required]
-        public string director { get; set; }
-        [Required]
-        public string rating { get; set; }
-        public bool? edited { get; set; }
-        public string? lent { get; set; }
+        public string? LentTo { get; set; }
         [StringLength(25, ErrorMessage = "Notes cannot be longer than 25 characters.")]
-        public string? notes { get; set; }
+
+        [Required]
+        public bool CopiedToPlex { get; set; }
+        public string? Notes { get; set; }
     }
 }

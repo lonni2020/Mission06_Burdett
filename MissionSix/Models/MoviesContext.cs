@@ -9,5 +9,14 @@ namespace MissionSix.Models
         }
 
         public DbSet<Movie> Movies { get; set; }
+        public DbSet<Categories> Categories { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Categories>().HasData(
+                new  Categories { CategoryId=1,CategoryName="Sci-fi"}
+ 
+                );
+        }
     }
 }

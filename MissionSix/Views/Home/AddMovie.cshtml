@@ -19,20 +19,20 @@
 
 <div class="text-center">
     <form method="post">
-        <label  asp-for="category">Category</label>
-        <input required asp-for="category" />
+        <!--<label  asp-for="CategoryID">Category</label>
+        <input required asp-for="CategoryId" />-->
         <br /> 
-        <label asp-for="title">Title</label>
-        <input required asp-for="title" />
+        <label asp-for="Title">Title</label>
+        <input required asp-for="Title" />
         <br />
-        <label asp-for="year">Year</label>
-        <input required asp-for="year" />
+        <label asp-for="Year">Year</label>
+        <input required asp-for="Year" />
         <br />
-        <label asp-for="director">Director</label>
-        <input required asp-for="director" />
+        <label asp-for="Director">Director</label>
+        <input required asp-for="Director" />
         <br />
-        <label asp-for="rating">Rating</label>
-        <select required asp-for="rating">
+        <label asp-for="Rating">Rating</label>
+        <select required asp-for="Rating">
             <option value="NR">NR</option>
             <option value="G">G</option>
             <option value="PG">PG</option>
@@ -45,14 +45,19 @@
         </select>
         
         <br />
-        <label asp-for="edited" >Edited</label>
-        <input asp-for="edited" />
+        <label asp-for="Edited">Edited?</label>
+        <input type="checkbox" asp-for="Edited" value="1" />
+        <label for="Edited">Yes</label>
         <br />
-        <label asp-for="lent">Lent To:</label>
-        <input asp-for="lent" />
+        <label asp-for="LentTo">Lent To:</label>
+        <input asp-for="LentTo" />
         <br />
-        <label asp-for="notes">Notes:</label>
-        <textarea maxlength="50" asp-for="notes"></textarea>
+        <label asp-for="CopiedToPlex">Copied to Plex?</label>
+        <input type="checkbox" asp-for="CopiedToPlex" value="1" />
+        <label for="CopiedToPlex">Yes</label>
+        <br />
+        <label asp-for="Notes">Notes:</label>
+        <textarea maxlength="50" asp-for="Notes"></textarea>
         
         <br />
         <button type="submit">Add Movie</button>
