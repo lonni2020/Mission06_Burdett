@@ -48,17 +48,18 @@ namespace MissionSix.Migrations
                     b.Property<int?>("CategoryId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<bool>("CopiedToPlex")
+                    b.Property<int>("CopiedToPlex")
                         .HasMaxLength(25)
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Director")
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("Edited")
+                    b.Property<int>("Edited")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("LentTo")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Notes")

@@ -25,14 +25,14 @@ namespace MissionSix.Models
        
         public string? Rating { get; set; }
         [Required]
-        public bool Edited { get; set; }
+        public int Edited { get; set; }
 
         [Required]
         public string? LentTo { get; set; }
         [StringLength(25, ErrorMessage = "Notes cannot be longer than 25 characters.")]
 
         [Required]
-        public bool CopiedToPlex { get; set; }
+        public int CopiedToPlex { get; set; }
         public string? Notes { get; set; }
     }
 }

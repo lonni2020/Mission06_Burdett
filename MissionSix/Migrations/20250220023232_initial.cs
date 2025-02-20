@@ -34,9 +34,9 @@ namespace MissionSix.Migrations
                     Year = table.Column<int>(type: "INTEGER", nullable: false),
                     Director = table.Column<string>(type: "TEXT", nullable: true),
                     Rating = table.Column<string>(type: "TEXT", nullable: true),
-                    Edited = table.Column<bool>(type: "INTEGER", nullable: false),
-                    LentTo = table.Column<string>(type: "TEXT", nullable: true),
-                    CopiedToPlex = table.Column<bool>(type: "INTEGER", maxLength: 25, nullable: false),
+                    Edited = table.Column<int>(type: "INTEGER", nullable: false),
+                    LentTo = table.Column<string>(type: "TEXT", nullable: false),
+                    CopiedToPlex = table.Column<int>(type: "INTEGER", maxLength: 25, nullable: false),
                     Notes = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
