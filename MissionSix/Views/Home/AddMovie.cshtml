@@ -46,15 +46,19 @@
         
         <br />
         <label asp-for="Edited">Edited?</label>
-        <input type="checkbox" asp-for="Edited" value="1" />
-        <label for="Edited">Yes</label>
+        <select asp-for="Edited">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select>
         <br />
         <label asp-for="LentTo">Lent To:</label>
         <input asp-for="LentTo" />
         <br />
         <label asp-for="CopiedToPlex">Copied to Plex?</label>
-        <input type="checkbox" asp-for="CopiedToPlex" value="1" />
-        <label for="CopiedToPlex">Yes</label>
+        <select asp-for="CopiedToPlex">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select>
         <br />
         <label asp-for="Notes">Notes:</label>
         <textarea maxlength="50" asp-for="Notes"></textarea>

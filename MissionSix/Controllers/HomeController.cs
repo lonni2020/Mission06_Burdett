@@ -31,10 +31,18 @@ namespace MissionSix.Controllers
         [HttpPost]
         public IActionResult AddMovie(Movie response)
         {
-            
+          
             _context.Movies.Add(response); // add record to database
             _context.SaveChanges();
             return View("Confirmation" , response);
+        }
+        [HttpGet]
+        public IActionResult MovieList()
+        {
+            var movies = _context.Movies
+                .ToList();
+
+            return View("MovieList", movies);
         }
 
 
