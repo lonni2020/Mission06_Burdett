@@ -19,11 +19,18 @@
 
 <div class="text-center">
     <form method="post">
-        <!--<label  asp-for="CategoryID">Category</label>
-        <input required asp-for="CategoryId" />-->
+
         <br /> 
         <label asp-for="Title">Title</label>
         <input required asp-for="Title" />
+        <br />
+         <select>
+            <option value="">Select a Category</option>
+            @foreach(Categories c in ViewBag.Categories)
+            {
+                <option value="@c.CategoryId">@c.CategoryName</option>
+            }
+        </select>
         <br />
         <label asp-for="Year">Year</label>
         <input required asp-for="Year" />
@@ -34,6 +41,7 @@
         <label asp-for="Rating">Rating</label>
         <select required asp-for="Rating">
             <option value="NR">NR</option>
+            <option value="UR">UR</option>
             <option value="G">G</option>
             <option value="PG">PG</option>
             <option value="PG-13">PG-13</option>
@@ -56,9 +64,10 @@
         <br />
         <label asp-for="CopiedToPlex">Copied to Plex?</label>
         <select asp-for="CopiedToPlex">
-            <option value="1">Yes</option>
-            <option value="0">No</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
         </select>
+     
         <br />
         <label asp-for="Notes">Notes:</label>
         <textarea maxlength="50" asp-for="Notes"></textarea>

@@ -25,6 +25,8 @@ namespace MissionSix.Controllers
 
         [HttpGet]
         public IActionResult AddMovie() {
+            ViewBag.Categories = _context.Categories
+                .OrderBy(x => x.CategoryName).ToList();
             return View();
         }
 

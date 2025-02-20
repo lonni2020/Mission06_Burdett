@@ -8,7 +8,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<MoviesContext>(options =>
 {
-    options.UseSqlite("Data Source = movies_tracker.sqlite");
+    options.UseSqlite("Data Source = JoelHiltonMovieCollection.sqlite");
 });
 
 var app = builder.Build();
