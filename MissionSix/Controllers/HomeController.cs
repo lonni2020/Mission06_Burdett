@@ -44,7 +44,7 @@ namespace MissionSix.Controllers
             var movies = _context.Movies
                 .ToList();
 
-            return View("MovieList", movies);
+            return View(movies);
         }
 
 

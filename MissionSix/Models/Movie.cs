@@ -29,10 +29,11 @@ namespace MissionSix.Models
 
         [Required]
         public string? LentTo { get; set; }
-        [StringLength(25, ErrorMessage = "Notes cannot be longer than 25 characters.")]
 
         [Required]
         public bool CopiedToPlex { get; set; }
+
+        [StringLength(25, ErrorMessage = "Notes cannot be longer than 25 characters.")]
         public string? Notes { get; set; }
     }
 }

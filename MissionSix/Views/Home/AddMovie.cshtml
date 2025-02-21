@@ -24,7 +24,7 @@
         <label asp-for="Title">Title</label>
         <input required asp-for="Title" />
         <br />
-         <select>
+         <select asp-for="CategoryId">
             <option value="">Select a Category</option>
             @foreach(Categories c in ViewBag.Categories)
             {
@@ -33,7 +33,7 @@
         </select>
         <br />
         <label asp-for="Year">Year</label>
-        <input required asp-for="Year" />
+        <input required asp-for="Year" min="1888"/>
         <br />
         <label asp-for="Director">Director</label>
         <input required asp-for="Director" />
